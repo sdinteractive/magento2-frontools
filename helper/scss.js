@@ -50,7 +50,10 @@ module.exports = function(gulp, plugins, config, name, file) { // eslint-disable
         plugins.sass()
           .on('error', plugins.sassError.gulpSassError(plugins.util.env.ci || false))
       )
-      .pipe(plugins.if(production, plugins.postcss([plugins.cssnano()])))
+      .pipe(plugins.if(production, plugins.postcss([plugins.cssnano({
+        reduceIdents: { keyframes: false },
+        discardUnused: { keyframes: false }
+      })])))
       .pipe(plugins.if(postcss.length, plugins.postcss(postcss || [])))
       .pipe(plugins.if(!disableMaps && !production, plugins.sourcemaps.write()))
       .pipe(plugins.if(production && !disableSuffix, plugins.rename({ suffix: '.min' })))
@@ -84,7 +87,10 @@ module.exports = function(gulp, plugins, config, name, file) { // eslint-disable
             plugins.sass()
               .on('error', plugins.sassError.gulpSassError(plugins.util.env.ci || false))
           )
-          .pipe(plugins.if(production, plugins.postcss([plugins.cssnano()])))
+          .pipe(plugins.if(production, plugins.postcss([plugins.cssnano({
+            reduceIdents: { keyframes: false },
+            discardUnused: { keyframes: false }
+          })])))
           .pipe(plugins.if(postcss.length, plugins.postcss(postcss || [])))
           .pipe(plugins.if(!disableMaps && !production, plugins.sourcemaps.write()))
           .pipe(plugins.if(production && !disableSuffix, plugins.rename({ suffix: '.min' })))
