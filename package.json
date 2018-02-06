@@ -42,6 +42,7 @@
     "marked": "~0.3.6",
     "marked-terminal": "~2.0.0",
     "merge-stream": "~1.0.1",
+    "postcss-custom-properties": "^6.2.0",
     "postcss-inline-svg": "^3.0.0",
     "postcss-object-fit-images": "^1.1.2",
     "postcss-reporter": "~3.0.0",
