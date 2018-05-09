@@ -14,7 +14,9 @@ module.exports = function() { // eslint-disable-line func-names
 
   // Loop through themes to compile scss or less depending on your config.json
   themes.forEach(name => {
-    streams.add(require('../helper/scss')(gulp, plugins, config, name));
+    if (!config.themes[name].skipBuild && (plugins.util.env.theme == name || !plugins.util.env.theme)) {
+      streams.add(require('../helper/scss')(gulp, plugins, config, name));
+    }
   });
 
   return streams;
