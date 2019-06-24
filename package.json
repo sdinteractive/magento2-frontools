@@ -5,7 +5,7 @@
     "email": "igloczek@gmail.com"
   },
   "private": true,
-  "version": "1.4.5",
+  "version": "1.4.6",
   "repository": {
     "type": "git",
     "url": "https://github.com/SnowdogApps/magento2-frontools"
