@@ -1,4 +1,3 @@
-
 'use strict';
 var fs = require('fs');
 var path = require('path');
@@ -63,7 +62,11 @@ module.exports = function(options) {
       taskName = parents.join(':') + ':' + taskName;
     }
 
-    gulp.task(taskName, dependencies, func.bind(context));
+    if (dependencies.length > 0) {
+      gulp.task(taskName, gulp.series(gulp.parallel(dependencies), func.bind(context)));
+    } else {
+      gulp.task(taskName, func.bind(context));
+    }
   }
 
   function loadTasks(currentPath) {
