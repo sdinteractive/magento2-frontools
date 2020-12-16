@@ -3,14 +3,14 @@
 const plugins = require('gulp-load-plugins')({
     pattern: ['*', '!gulp', '!gulp-load-plugins'],
     rename : {
-      'browser-sync'    : 'browserSync',
-      'fs-extra'        : 'fs',
-      'gulp-multi-dest' : 'multiDest',
-      'js-yaml'         : 'yaml',
-      'marked-terminal' : 'markedTerminal',
-      'merge-stream'    : 'mergeStream',
-      'postcss-reporter': 'reporter',
-      'run-sequence'    : 'runSequence'
+      'browser-sync'      : 'browserSync',
+      'fs-extra'          : 'fs',
+      'gulp-multi-dest'   : 'multiDest',
+      'js-yaml'           : 'yaml',
+      'marked-terminal'   : 'markedTerminal',
+      'merge-stream'      : 'mergeStream',
+      'postcss-reporter'  : 'reporter',
+      'gulp4-run-sequence': 'runSequence'
     }
   }),
   config = {};

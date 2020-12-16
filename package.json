@@ -46,7 +46,7 @@
     "postcss-inline-svg": "^3.0.0",
     "postcss-object-fit-images": "^1.1.2",
     "postcss-reporter": "~3.0.0",
-    "run-sequence": "~1.2.2",
+    "gulp4-run-sequence": "~1.0.1",
     "stylelint": "~7.10.1",
     "stylelint-config-standard": "~16.0.0"
   },
